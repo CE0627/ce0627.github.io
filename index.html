@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>李仲恩的網站</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="max-w-3xl mx-auto p-6 space-y-8">
+        <!-- 自我介紹 -->
+        <section class="bg-white shadow-md rounded-xl p-6">
+            <h1 class="text-3xl font-bold mb-4">李仲恩</h1>
+            <p>你好，我是李仲恩，一位熱愛音樂的學生，平時喜歡拉小提琴，享受音符流轉的時刻。</p>
+            <p class="mt-2">從四歲開始學琴，最喜歡帕格尼尼的曲子。</p>
+            <h2 class="mt-4 font-bold text-xl">📬 聯絡方式</h2>
+            <p>Email：<a href="mailto:chungen0627@gmail.com" class="text-blue-500">chungen0627@gmail.com</a></p>
+        </section>
+
+        <!-- 影片區塊 -->
+        <section class="bg-white shadow-md rounded-xl p-6">
+            <h2 class="text-2xl font-bold mb-4">🎻 小提琴作品</h2>
+            <div class="aspect-w-16 aspect-h-9">
+                <iframe class="w-full h-80 rounded-xl" src="https://www.youtube.com/embed/YourVideoID" title="YouTube video" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- 表情反應 + 留言 -->
+        <section class="bg-white shadow-md rounded-xl p-6 text-center">
+            <h2 class="text-2xl font-bold mb-4">What do you think about my website?</h2>
+            <div class="flex justify-center space-x-8 text-3xl mb-6">
+                <div>👍</div>
+                <div>😍</div>
+                <div>😮</div>
+            </div>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    this.page.url = window.location.href;
+                    this.page.identifier = window.location.pathname;
+                };
+                (function () {
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://https-ce0627-github-io.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+        </section>
+    </div>
+
+</body>
+</html>
