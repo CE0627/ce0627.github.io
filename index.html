@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蜥蜴的小天地</title>
+    <style>
+        body {
+            background-color: #dff4ff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .emoji-button {
+            font-size: 2rem;
+            margin: 10px;
+            padding: 10px;
+            border: 3px solid #ccc;
+            border-radius: 15px;
+            cursor: pointer;
+            background-color: white;
+        }
+        .emoji-button.selected {
+            border-color: #007bff;
+            box-shadow: 0 0 10px #007bff;
+        }
+        iframe {
+            margin: 20px auto;
+        }
+        .pagination {
+            margin-top: 40px;
+        }
+        .pagination a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <h1>蜥蜴的小天地</h1>
+    <p>我喜歡演奏小提琴<br>從四歲開始學琴<br>最喜歡帕格尼尼的曲子</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/_SLCVq3QvlM" frameborder="0" allowfullscreen></iframe>
+
+    <h2>What do you think about my website?</h2>
+    <div>
+        <button class="emoji-button" onclick="toggleEmoji(this)">👍</button>
+        <button class="emoji-button" onclick="toggleEmoji(this)">😍</button>
+        <button class="emoji-button" onclick="toggleEmoji(this)">😲</button>
+    </div>
+    <div id="disqus_thread" style="margin-top: 40px;"></div>
+
+    <div class="pagination">
+        <a href="page2.html">下一頁</a>
+    </div>
+
+    <script>
+        function toggleEmoji(button) {
+            const buttons = document.querySelectorAll('.emoji-button');
+            buttons.forEach(btn => {
+                if (btn === button && btn.classList.contains('selected')) {
+                    btn.classList.remove('selected');
+                } else {
+                    btn.classList.remove('selected');
+                }
+            });
+            if (!button.classList.contains('selected')) {
+                button.classList.add('selected');
+            }
+        }
+
+        var disqus_config = function () {
+            this.page.url = window.location.href;
+            this.page.identifier = "home";
+        };
+        (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://ce0627.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+</body>
+</html>
