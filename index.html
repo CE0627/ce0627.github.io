@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李仲恩</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .section {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        iframe {
+            width: 100%;
+            max-width: 720px;
+            height: 405px;
+            border: none;
+            border-radius: 8px;
+        }
+        #disqus_thread {
+            margin-top: 30px;
+        }
+        .emoji {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="section">
+        <h1>李仲恩</h1>
+        <p>你好，我是李仲恩，一位熱愛音樂的學生，平時喜歡拉小提琴，享受音符流轉的時刻。</p>
+        <h2>📫 聯絡方式</h2>
+        <p>Email：<a href="mailto:chungen0627@gmail.com">chungen0627@gmail.com</a></p>
+    </div>
+
+    <div class="section">
+        <h2>🎻 小提琴作品</h2>
+        <iframe src="https://www.youtube.com/embed/CeAGhU0u0pI" allowfullscreen></iframe>
+    </div>
+
+    <div class="section">
+        <h2>What do you think about my website? 😆 ❤️ 👍 😳</h2>
+        <!-- Disqus reaction + comment section -->
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_config = function () {
+            this.page.url = 'https://ce0627.github.io';
+            this.page.identifier = 'homepage';
+            this.language = 'zh';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://https-ce0627-github-io.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        </script>
+        <noscript>請啟用 JavaScript 以查看 <a href="https://disqus.com/?ref_noscript">由 Disqus 提供的留言功能。</a></noscript>
+    </div>
+
+</body>
+</html>
